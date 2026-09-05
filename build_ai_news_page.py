@@ -166,6 +166,19 @@ h1{
 }
 .cta:hover{filter:brightness(1.15);transform:translateY(-1px);}
 footer{margin-top:44px;text-align:center;color:#5f688a;font-size:12px;}
+.notice{
+  margin:0 0 20px;
+  padding:14px 18px;
+  border:1px solid rgba(124,186,255,.28);
+  border-radius:14px;
+  background:rgba(79,140,255,.08);
+  color:#c6d3f0;
+  font-size:13px;
+  line-height:1.7;
+}
+.notice strong{color:#8cc3ff;}
+.notice a{color:#5fd0ff;text-decoration:none;}
+.notice a:hover{text-decoration:underline;}
 .group-head{
   display:flex;align-items:baseline;justify-content:space-between;gap:12px;
   margin:6px 2px 14px;padding-bottom:10px;border-bottom:1px solid var(--border);
@@ -198,7 +211,15 @@ footer{margin-top:44px;text-align:center;color:#5f688a;font-size:12px;}
     </div>
   </header>
   <main id="content"></main>
-  <footer>数据来源：bilibili_ai_news.json · 双击本文件即可离线查看</footer>
+  <div class="notice">
+    <strong>更新说明：</strong>本页面是发布快照，不是实时榜单。站长的电脑基本只在周末早上开机，
+    自动更新（原计划每天 08:00，已设置“错过就尽快补跑”）通常在开机后执行，
+    因此本站一般每周末刷新一次；偶尔周末没开机，本周就不会有新快照。
+    如果你需要<strong>每天自动更新</strong>的版本，请克隆
+    <a href="https://github.com/mystudy202607/bilibili-ai-news" target="_blank" rel="noopener noreferrer">源代码仓库</a>，
+    在本地按 README 步骤运行（每天 08:00 自动任务），或自行部署到 GitHub Actions 等定时环境。
+  </div>
+  <footer>数据来源：bilibili_ai_news.json · 本地双击 index.html 也可离线查看</footer>
 </div>
 <script>
 const VIDEOS = @@DATA@@;

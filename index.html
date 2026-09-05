@@ -132,6 +132,19 @@ h1{
 }
 .cta:hover{filter:brightness(1.15);transform:translateY(-1px);}
 footer{margin-top:44px;text-align:center;color:#5f688a;font-size:12px;}
+.notice{
+  margin:0 0 20px;
+  padding:14px 18px;
+  border:1px solid rgba(124,186,255,.28);
+  border-radius:14px;
+  background:rgba(79,140,255,.08);
+  color:#c6d3f0;
+  font-size:13px;
+  line-height:1.7;
+}
+.notice strong{color:#8cc3ff;}
+.notice a{color:#5fd0ff;text-decoration:none;}
+.notice a:hover{text-decoration:underline;}
 .group-head{
   display:flex;align-items:baseline;justify-content:space-between;gap:12px;
   margin:6px 2px 14px;padding-bottom:10px;border-bottom:1px solid var(--border);
@@ -164,7 +177,15 @@ footer{margin-top:44px;text-align:center;color:#5f688a;font-size:12px;}
     </div>
   </header>
   <main id="content"></main>
-  <footer>数据来源：bilibili_ai_news.json · 双击本文件即可离线查看</footer>
+  <div class="notice">
+    <strong>更新说明：</strong>本页面是发布快照，不是实时榜单。站长的电脑基本只在周末早上开机，
+    自动更新（原计划每天 08:00，已设置“错过就尽快补跑”）通常在开机后执行，
+    因此本站一般每周末刷新一次；偶尔周末没开机，本周就不会有新快照。
+    如果你需要<strong>每天自动更新</strong>的版本，请克隆
+    <a href="https://github.com/mystudy202607/bilibili-ai-news" target="_blank" rel="noopener noreferrer">源代码仓库</a>，
+    在本地按 README 步骤运行（每天 08:00 自动任务），或自行部署到 GitHub Actions 等定时环境。
+  </div>
+  <footer>数据来源：bilibili_ai_news.json · 本地双击 index.html 也可离线查看</footer>
 </div>
 <script>
 const VIDEOS = [{"title": "【4K60帧】经典老歌：瑞克·埃斯利《Never Gonna Give You Up》1987 AI修复补帧版", "owner": "KG-Area21", "view": 37213038, "like": 1267007, "pubdate": 1611593770, "url": "https://www.bilibili.com/video/BV1uT4y1P7CX", "bvid": "BV1uT4y1P7CX", "source": "全站搜索"}, {"title": "AI造福人类此刻具象化了！", "owner": "学医十年归来仍是护士", "view": 23896183, "like": 177378, "pubdate": 1741424230, "url": "https://www.bilibili.com/video/BV1JmRpYrEe7", "bvid": "BV1JmRpYrEe7", "source": "全站搜索"}, {"title": "你想定制一个AI孩子吗？", "owner": "妈妈再灭我一次", "view": 22269218, "like": 30283, "pubdate": 1775817132, "url": "https://www.bilibili.com/video/BV1s5QwBGEsv", "bvid": "BV1s5QwBGEsv", "source": "全站搜索"}, {"title": "【牌子】当世界过分“诚实”，我们要如何保持好奇与勇气【B站AI创作大赛-开放赛道】", "owner": "DiDi_OK", "view": 21090304, "like": 1409774, "pubdate": 1770121864, "url": "https://www.bilibili.com/video/BV11mFLziEyP", "bvid": "BV11mFLziEyP", "source": "全站搜索"}, {"title": "陈翔六点半：AI在挑战人类", "owner": "陈翔六点半", "view": 20139523, "like": 82923, "pubdate": 1769084878, "url": "https://www.bilibili.com/video/BV13zBfBLE71", "bvid": "BV13zBfBLE71", "source": "全站搜索"}, {"title": "凭借一个视频迅速爆火全网的十大网红，虚拟AI一天涨粉百万！", "owner": "小轩的宝藏音乐", "view": 19822907, "like": 86960, "pubdate": 1637434239, "url": "https://www.bilibili.com/video/BV1FY41147gq", "bvid": "BV1FY41147gq", "source": "全站搜索"}, {"title": "AI：把人类笑死或者气死之后就可以取代你们了！战术！", "owner": "ChatGPT情报员", "view": 19775843, "like": 51454, "pubdate": 1687845771, "url": "https://www.bilibili.com/video/BV1vs4y1C7nX", "bvid": "BV1vs4y1C7nX", "source": "全站搜索"}, {"title": "【AI视频生成入门教程】即梦+豆包+剪映，制作AI漫剧+AI短剧+AI动态漫+AI动画+ComfyUI全集AI漫剧零基础入门教程，AI教程零基础入门到精通", "owner": "AI视频生成入门教程", "view": 18752717, "like": 448316, "pubdate": 1601553982, "url": "https://www.bilibili.com/video/BV1fV41117NX", "bvid": "BV1fV41117NX", "source": "全站搜索"}, {"title": "小学生拿到新电脑VS大学生拿到新电脑", "owner": "黑客老K", "view": 8013782, "like": 156005, "pubdate": 1742892040, "url": "https://www.bilibili.com/video/BV1kCoxYZEAc", "bvid": "BV1kCoxYZEAc", "source": "科技区热门"}, {"title": "在全球屠榜的国产模型，夯到爆的免费神器", "owner": "田同学Tino", "view": 5798497, "like": 137794, "pubdate": 1763542800, "url": "https://www.bilibili.com/video/BV1V4yEBXErF", "bvid": "BV1V4yEBXErF", "source": "全站搜索"}, {"title": "【闪客】为啥所有AI都数不清手指？多模态底层原理揭秘", "owner": "飞天闪客", "view": 5521332, "like": 59042, "pubdate": 1754729890, "url": "https://www.bilibili.com/video/BV1zNt8zzEZX", "bvid": "BV1zNt8zzEZX", "source": "全站搜索"}, {"title": "【卖手机的老六】更新了一条视频，快来围观！", "owner": "卖手机的老六", "view": 2979966, "like": 296966, "pubdate": 1741520432, "url": "https://www.bilibili.com/video/BV1GdR8YJEiD", "bvid": "BV1GdR8YJEiD", "source": "科技区热门"}, {"title": "AI时代，英语学习已经变的无比简单！【闪电飞船】", "owner": "闪电飞船", "view": 2659299, "like": 10211, "pubdate": 1730719800, "url": "https://www.bilibili.com/video/BV1igSdY7EFE", "bvid": "BV1igSdY7EFE", "source": "科技区热门"}, {"title": "手机续航大横评！到底谁的电池最耐用？", "owner": "极客湾Geekerwan", "view": 2173938, "like": 123725, "pubdate": 1743327805, "url": "https://www.bilibili.com/video/BV1tnZqYTEx6", "bvid": "BV1tnZqYTEx6", "source": "科技区热门"}, {"title": "2025全球最全电脑故障解决指南", "owner": "喵喵折-好物清单", "view": 2156954, "like": 203135, "pubdate": 1743480208, "url": "https://www.bilibili.com/video/BV17WZ4YsEiX", "bvid": "BV17WZ4YsEiX", "source": "科技区热门"}, {"title": "【2025年4月电脑装机配置推荐】不做无脑推荐！24套高性价比主机！含5060以及5060TI方案！新手小白预算3-36K怎么装机？含显卡游戏性能天梯图！", "owner": "和微论件", "view": 1994985, "like": 23402, "pubdate": 1743414597, "url": "https://www.bilibili.com/video/BV1KXZJYpEut", "bvid": "BV1KXZJYpEut", "source": "科技区热门"}, {"title": "我来测评一下魔幻手机", "owner": "徐仕兴", "view": 1572088, "like": 74159, "pubdate": 1742984900, "url": "https://www.bilibili.com/video/BV196oiY6Eac", "bvid": "BV196oiY6Eac", "source": "科技区热门"}, {"title": "我国首个脑机接口指导价发布，震惊世界科技和医学两界", "owner": "科技日常", "view": 1475115, "like": 158822, "pubdate": 1743442050, "url": "https://www.bilibili.com/video/BV11PZsY8EtB", "bvid": "BV11PZsY8EtB", "source": "科技区热门"}, {"title": "3D打印人纹手机支架2.0版本", "owner": "元宇潮玩", "view": 1228915, "like": 32111, "pubdate": 1743089307, "url": "https://www.bilibili.com/video/BV1atZVY5Eqc", "bvid": "BV1atZVY5Eqc", "source": "科技区热门"}, {"title": "【2025年4月蓝牙耳机推荐】不恰饭亲测年度推荐，入耳式/半入耳/开放式/手机厂/HIFI厂，降噪，音质，学生党耳机，全价位各大品牌好物集结！", "owner": "翻斗仔仔", "view": 1118508, "like": 5979, "pubdate": 1743413212, "url": "https://www.bilibili.com/video/BV1GWZnYcEps", "bvid": "BV1GWZnYcEps", "source": "科技区热门"}];
