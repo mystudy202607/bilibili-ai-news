@@ -2,7 +2,13 @@
 $ErrorActionPreference = "Stop"
 
 $dir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$python = "C:\Users\Administrator\AppData\Local\Programs\Python\Python311\python.exe"
+# 2026-10-11: Python 3.11.9 was uninstalled, this machine runs 3.12 now.
+# Resolve the interpreter dynamically so a future version bump does not silently break this task.
+$python = Join-Path $env:LOCALAPPDATA "Programs\Python\Python312\python.exe"
+if (-not (Test-Path -LiteralPath $python)) {
+    $python = (Get-Command python.exe -ErrorAction SilentlyContinue | Select-Object -First 1).Source
+}
+if (-not $python) { throw "python.exe not found: neither Python312 nor PATH" }
 $repo = Join-Path $dir "bilibili-ai-news"
 $log = Join-Path $dir "bilibili_ai_news_update.log"
 $stamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
